@@ -499,7 +499,7 @@ function animFoci(foci, pos, duration){
 // Labels
 
 svg.append('text')
-  .text('5 participants =')
+  .text('1 participant for each ')
   .attr({
     x: w - 12
     , y: h - 13
