@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=1200">
+    <meta name="viewport" content="width=500">
     <title>Simpson's Paradox</title>
 
     <link rel="stylesheet" href="Flat-UI-master/bootstrap/css/bootstrap.min.css">
@@ -10,75 +10,16 @@
     <link rel="stylesheet" href="simp-style.css">
   </head>
   <body ng-app="mainApp">
-    <div class="container" ng-controller="MainCtrl">
-      <a href="https://twitter.com/share" class="twitter-share-button" data-via="vicapow">Tweet</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-
-      <div class="title">
-        <h1>Simpson's Paradox</h1>
-        <p class="lead">Girls gone average. <br> Averages gone wild.</p>
-      </div>
+    
       <div class="row">
-        <div class="col-lg-6">
-          <p>In 1973, the University of California-Berkeley was sued for sex discrimination. The numbers looked bad: the graduate schools had just accepted 44% of male applicants but only 35% of female applicants. When researchers looked at the evidence, though, <a href="http://www.unc.edu/~nielsen/soci708/cdocs/Berkeley_admissions_bias.pdf">they uncovered</a> something surprising:</p>
-          <blockquote>
-            <p>If the data are properly pooled...there is a small but statistically significant bias in favor of women.</p>
-            <small>(p. 403)</small>
-          </blockquote>
-          <p>It was a textbook case of <strong>Simpson's paradox</strong>.</p>
-        </div>
-        <div class="col-lg-2">
-          <div id = "donut-chart"></div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-6">
-          <h4>Definition</h4>
-          <p>Every Simpson's paradox involves at least three variables:</p>
-          <ol>
-             <li>the explained</li>
-             <li>the <em>observed</em> explanatory</li>
-             <li>the <em>lurking</em> explanatory</li>
-           </ol>
-           <p>If the effect of the observed explanatory variable on the explained variable changes directions when you account for the lurking explanatory variable, you've got a Simpson's Paradox.</p>
-          <p>For example, to the right, <em>x </em>appears to have a negative effect on <em>y</em>, but the opposite is true when you account for color. <em>y</em> is the explained variable, <em>x</em> the observed explanatory variable, and color the lurking explanatory variable.</p>
-        </div>
-        <div class="col-lg-4">
-          <div id = 'line-chart'></div>
-        </div>
-      </div>
-      
-        <br>
-      <div class="row">
-        <div class = "col-lg-4" >
-            <h4>Proper Pooling</h4>
-            <p>By "properly pooled," the investigators at Berkeley meant "broken down by department." Men more often applied to science departments, while women inclined towards humanities. Science departments require special technical skills but accept a large percentage of qualified applicants. In contrast, humanities departments only require a standard undergrad cirriculum but have fewer slots.</p>
-            <p>The authors concluded that any sexism occurred before Berkeley ever saw the applications:</p>
-            <blockquote>
-            <p>Women are shunted by their socialization and education toward fields of graduate study that are generally more crowded, less productive of completed degrees, and less well funded, and that frequently offer poorer professional employment prospects.</p>
-              <small>(p. 403)</small>
-            </blockquote>
-            <p>The results gave data on six departments, but the names were changed to protect the innocent.</p>
-        </div>
         <div class="force-directed-container vis col-lg-8">
-          <h4> Departments </h4>
+          <h4> Age group </h4>
           <svg></svg>
           <a class="btn btn-primary combine-button" href="#">combine</a>
         </div>
       </div>
       
-      <div class="row">
-        <div class="col-lg-6">
-            <h4>Illustration</h4>
-            <p>Suppose there are two departments: one easy, one hard ('hard' as in 'hard to get into'). The sliders below set what percentage each gender applies to the easy department. Both departments prefer women, but if too many women apply to the hard one, their acceptance rate drops below the men's.</p>
-        </div>
-      </div>
-        <!-- the table -->
-      <div ng-include="'views/table.html'"></div>
-        
-      <!-- the bottom -->
-      <div class="row" ng-include="'views/bottom.html'"></div>
-    </div><!-- /.container -->  
+<!-- /.container -->  
     <div class="custom-tooltip" style="opacity:0;"></div>
   </body>
     <!-- libraries: js -->
