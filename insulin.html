@@ -16,8 +16,8 @@
   <body>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script>
-      var w = window.innerWidth
-        , h = window.innerHeight
+      var w = 580
+        , h = 580
         , svg = d3.select('body').append('svg')
           .attr({ width: w, height: h })
         , Force = function(nodes, links){
@@ -37,7 +37,7 @@
                 id : id
                 , x : Math.random() * w
                 , y : Math.random() * h
-                , charge : -10
+                , charge : -2
                 , name : name
               }
             })

@@ -16,8 +16,8 @@
   <body>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script>
-      var w = window.innerWidth
-        , h = window.innerHeight
+      var w = 580
+        , h = 580
         , svg = d3.select('body').append('svg')
           .attr({ width: w, height: h })
         , Force = function(nodes, links){
@@ -37,7 +37,7 @@
                 id : id
                 , x : Math.random() * w
                 , y : Math.random() * h
-                , charge : -10
+                , charge : -2
                 , name : name
               }
             })
@@ -57,7 +57,7 @@
         , nodes1 = Nodes(545, 0, 'node-1')
         , nodes2 = Nodes(361, 1, 'node-2')
         , foci1 = Foci(w / 2, h / 2, 'foci-1')
-        , foci2 = Foci(w / 2 + 200, h / 2, 'foci-2')
+        , foci2 = Foci(w / 2 + 50, h / 2, 'foci-2')
         , links1 = Links(nodes1, foci1)
         , links2 = Links(nodes2, foci2)
         , all = nodes1.concat(nodes2).concat([foci1, foci2])
