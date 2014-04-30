@@ -12,11 +12,11 @@ var blue = '#E74C3C'
  , data = {
 'Non insulin dependent' : {
 '40 or younger' : [0, 15]
-, 'Older than 40' : [218, 311]
+, 'Older than 40' : [218, 529]
 }
 , 'Insulin dependent' : {
-'40 or younger' : [1, 130]
-, 'Older than 40' : [104, 124]
+'40 or younger' : [1, 131]
+, 'Older than 40' : [104, 228]
 }
 }
   , row_totals = {}
